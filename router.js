@@ -5,6 +5,8 @@ Router.route('/thankyou', function() {
   this.render('thankyou')
 });
 
-Router.route('/', function() {
-  this.render('home')
+Router.route('/', function () {
+  this.render('Home', {
+    data: function () { return true }
+  });
 });
