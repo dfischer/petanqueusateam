@@ -1,0 +1,62 @@
+<head>
+  <title>Petanque Team USA</title>
+</head>
+
+<template name="layout">
+  <script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '858353474214834',
+      xfbml      : true,
+      version    : 'v2.2'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+  </script>
+  <img src="/bg.png" alt="Petanque Win Background" class='bg'>
+
+  <div class="container">
+    {{> yield}}
+  </div>
+
+</template>
+
+<template name="home">
+  <span class='tag'>Nice 2015</span>
+  <h1 class='header'>Petanque Team USA</h1>
+  <h2 class='sub header'>Support</h2>
+
+  <p>We want you to be part of our story so follow us on Facebook and see the adventures of TEAM USA unfold.</p>
+
+  <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+    <input type="hidden" name="cmd" value="_s-xclick">
+    <input type="hidden" name="hosted_button_id" value="QAX9UHTE5USRU">
+    <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+    <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+  </form>
+
+
+  <div class="fb-like" data-href="https://www.facebook.com/PetanqueTeamUSA" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
+
+
+  <div class="social">
+    <div class="item"><a href="https://www.facebook.com/PetanqueTeamUSA" class='facebook'>Facebook</a></div>
+    <div class="item"><a href="" class="twitter">Twitter</a></div>
+    <div class="item"><a href="" class="youtube">Youtube</a></div>
+  </div>
+</template>
+
+<template name="thankyou">
+  <p>
+    Thank you for your generous donation! We really appreciate you taking the time to provide your support.
+  </p>
+  <div class="fb-like" data-href="https://www.facebook.com/PetanqueTeamUSA" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
+
+</template>
